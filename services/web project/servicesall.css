@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    
+}
+.section1{
+    
+    margin-bottom:5%;
+}
+.section1 h1{
+    
+    color: #3FABE1;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+
+
+}
+.section{
+    background-color: #3FABE1;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 90%;
+    
+    margin: 10rem auto 0 auto;
+
+}
+.section img{
+    height: 300px;
+    width: 50%;
+}
+
+.section p{
+    color: rgb(17, 17, 16);
+    margin-right: 40px;
+    text-align :justify;
+    font-size: 20px;
+    line-height: 0.5cm;
+    width: 70%;
+    
+}
+.section ul{
+    color: red;
+}
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

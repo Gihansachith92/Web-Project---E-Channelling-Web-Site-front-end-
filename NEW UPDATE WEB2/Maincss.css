@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+    color:#54677c;
+}
+body{
+    min-height:100vh;
+    width:100%;
+    background-color: #e4e4e4;
+    display:flex;
+    /*Responsive behavior*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+.card{
+    position: relative;
+    width:300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.15);
+    padding:16px;
+    margin:56px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    height: 400px;
+
+}
+.card:hover{
+      transform: translateY(-10px);
+}
+.card-image{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 15px 35px -15px rgba(0,0,0,0.5),0 5px 20px 0 rgba(0,0,0,0.1);
+
+
+}
+.card-image img{
+    width:150px;
+    transform: scale(1,1);
+    
+}
+
+
+p{
+    line-height:24px;
+    letter-spacing:0.5px;
+}
+.name{
+    margin-top: 80px;
+    font-size: 1.4em;
+    color:#333;
+    font-weight:bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+
+}
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+button{
+    margin: 12px 8px;
+    width:44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    
+}
+button.hover{
+    opacity: 0.8;
+}
+button i{
+    color: #fff;
+    font-size: 1.4em;
+}
+button.twitter{
+    background-color: #1da1f2;
+}
+button.facebook{
+    background-color: #1da1f2;
+}
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

@@ -1,0 +1,108 @@
+.contact h1{
+            width: 100%;
+            text-align: center;
+            color: #3FABE1;
+            font-family:arial;
+            font-size: 50px;
+           
+         }
+         .contact{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 50px;
+            background-color: white;
+            height: 120px;            
+         } 
+
+         table{
+            
+            border-collapse: collapse;
+            padding-top: 20px;
+            
+
+         }
+
+         .tdiv th{
+            font-size: 20px;
+            font-family: serif;
+            color: #86C544;
+            margin-left:10px;
+            text-align: left;
+            padding: 10px;
+            
+           
+         }
+
+         .tdiv td{
+            font-size: 17px;
+            font-family: serif;
+            color: black;
+            margin: left;
+            text-align: left;
+            padding: 8px;
+            
+         }
+
+         .tdiv tr{
+            margin-top: 5px;
+            padding-top: 40px;
+         }
+
+         .soci td{
+            font-size: 17px;
+            color: rgb(47, 47, 240);
+         }
+
+         .tdiv{
+            width: 45%;
+            margin-left: 10px;
+            float: left;
+         }
+
+         .mdiv iframe{
+            width: 50%;
+            margin: 20px;
+            float: right;
+            border-radius: 40px;
+         }
+         .contact .tdiv{
+            position: relative;
+            top: 10%;
+         }
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

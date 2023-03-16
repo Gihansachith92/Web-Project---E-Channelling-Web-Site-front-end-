@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Signin form</title>
+    <link rel="stylesheet" href="beautiful.css" />
+
+</head>
+
+
+<div class="bg-img">
+
+    <div class="container">
+
+        <form autocomplete="off" action="appoinment/apn.html">
+
+            <h1><u>
+                    <center>Sign In Form</center>
+                </u></h1>
+
+            <div class="input-section">
+                <label>User name<span class="required-color">*</span></label>
+                <input type="text" placeholder="Enter user Name" id="user-name-input" required />
+                <span id="user-name-error" class="hide required-color error-message">Invalid input</span>
+                <span id="empty-user-name" class="hide required-color error-message">user name cannot be empty
+                </span>
+            </div>
+
+
+
+            <div class="input-section">
+                <label>Password<span class="required-color">*</span></label>
+                <input type="password" placeholder="Enter password" id="password-input" required />
+                <span id="password-error" class="hide required-color error-message">
+                    Passwords Should Have Letter,Special symbols, Numbers And
+                    Length should be more than at least 8 characters
+                </span>
+                <span id="empty-password" class="hide required-color error-message">Password Cannot Be Empty</span>
+            </div>
+
+
+
+
+            <a class="small btn btn-link btn-block" href="*">Forgotten your username or password?</a>
+            <button id="submit-button">Sign in</button>
+        </form>
+
+        <div class="login">Or Sign in with Social media </div>
+
+        <div class="links">
+            <div class="facebook">
+                <a href="https://www.facebook.com" class="fa fa-facebook"><span> Facebook</span></a>
+            </div>
+
+            <div class="instagram">
+                <a href="https://www.instagram.com" class="fa fa-instagram"><span> Instagram</span></a>
+            </div>
+        </div>
+        <div class="signup">Don't have account?
+            <a href="signupform.html">Signup Now</a>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        //User Name
+        let UserNameInput = document.getElementById("user-name-input");
+        let UserNameError = document.getElementById("user-name-error");
+        let emptyUserNameError = document.getElementById("empty-user-name");
+
+
+
+        //Password
+        let passwordInput = document.getElementById("password");
+        let passwordError = document.getElementById("password-error");
+        let emptyPasswordError = document.getElementById("empty-password");
+
+
+        //Password Verification
+        const passwordVerify = (password) => {
+            const regex =
+                /^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])(?=.+[\$\%\^\&\!@\#\*\(\)\+\=`~\?\>\<])/;
+            return regex.test(password) && password.length >= 8;
+        };
+
+        //Text verification (if input contains only text)
+        const textVerify = (text) => {
+            const regex = /^[a-zA-Z]{3,}$/;
+            return regex.test(text);
+        };
+
+
+
+        //For empty input - accepts(input,empty error for that input and other errors)
+        const emptyUpdate = (
+            inputReference,
+            emptyErrorReference,
+            otherErrorReference
+        ) => {
+            if (!inputReference.value) {
+                //input is null/empty
+                emptyErrorReference.classList.remove("hide");
+                otherErrorReference.classList.add("hide");
+                inputReference.classList.add("error");
+            } else {
+                //input has some content
+                emptyErrorReference.classList.add("hide");
+            }
+        };
+
+        //For error styling and displaying error message
+        const errorUpdate = (inputReference, errorReference) => {
+            errorReference.classList.remove("hide");
+            inputReference.classList.remove("valid");
+            inputReference.classList.add("error");
+        };
+
+        //For no errors
+        const validInput = (inputReference) => {
+            inputReference.classList.remove("error");
+            inputReference.classList.add("valid");
+        };
+
+
+
+        //User name
+        UserNameInput.addEventListener("input", () => {
+            if (textVerify(UserNameInput.value)) {
+                //If verification returns true
+                UserNameError.classList.add("hide");
+                validInput(UserNameInput);
+            } else {
+                //for false
+                errorUpdate(UserNameInput, UserNameError);
+                //empty checker
+                emptyUpdate(UserNameInput, emptyUserNameError, UserNameError);
+            }
+        });
+
+        //Password
+        passwordInput.addEventListener("input", () => {
+            if (passwordVerify(passwordInput.value)) {
+                passwordError.classList.add("hide");
+                validInput(passwordInput);
+            } else {
+                errorUpdate(passwordInput, passwordError);
+                emptyUpdate(passwordInput, emptyPasswordError, passwordError);
+            }
+        });
+
+
+
+        //Submit button
+        submitButton.addEventListener("click", () => {
+            if (validClasses.length == 6 && invalidClasses.length == 0) {
+                alert("Your account created successfully!");
+            } else {
+                alert("Error");
+            }
+        });
+
+
+    </script>
+
+    </body>
+
+</html>
